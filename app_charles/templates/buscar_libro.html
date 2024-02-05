@@ -1,3 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1> Librería Charles </h1>
+    <!-- Agrega cualquier enlace a estilos CSS externos que desees usar -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- O utiliza estilos en línea -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        form {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
 <form method="post" action="{% url 'buscar_libro' %}">
     {% csrf_token %}
     {{ form }}
@@ -12,3 +64,6 @@
         {% endfor %}
     </ul>
 {% endif %}
+
+</body>
+</html>
