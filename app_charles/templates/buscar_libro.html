@@ -1,0 +1,14 @@
+<form method="post" action="{% url 'buscar_libro' %}">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Buscar</button>
+</form>
+
+{% if libros %}
+    <h3>Libros Disponibles:</h3>
+    <ul>
+        {% for libro in libros %}
+            <li>{{ libro.nombre }} - {{ libro.autor }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
